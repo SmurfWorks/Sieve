@@ -1,0 +1,24 @@
+{
+    "model": "SmurfWorks\\ModelFinderTests\\SampleModels\\User",
+    "query": {
+        "attributes": [],
+        "scopes": [
+            "activated"
+        ],
+        "relations": [
+            {
+                "relation": "role",
+                "model": "SmurfWorks\\ModelFinderTests\\SampleModels\\User\\Role",
+                "query": {
+                    "attributes": [
+                        {
+                            "field": "name",
+                            "operator": "eq",
+                            "value": "Admin"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

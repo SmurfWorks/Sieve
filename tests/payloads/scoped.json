@@ -1,0 +1,9 @@
+{
+    "model": "SmurfWorks\\ModelFinderTests\\SampleModels\\User",
+    "query": {
+        "scopes": [
+            "activated",
+            "subscribed"
+        ]
+    }
+}

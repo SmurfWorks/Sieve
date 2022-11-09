@@ -1,0 +1,46 @@
+{
+    "name": "smurfworks/sieve",
+    "description": "Quickly and easily browse the data of your Laravel application using app-layer logic.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "SmurfWorks\\Sieve\\": "src/",
+            "SmurfWorks\\SieveApp\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SmurfWorks\\SieveTests\\": "tests/",
+            "SmurfWorks\\ModelFinderTests\\": "vendor/smurfworks/model-finder/tests/"
+        },
+        "classmap": [
+            "vendor/smurfworks/model-finder/tests/database/seeds"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Glyn Simpson",
+            "email": "github@smurfworks.com"
+        }
+    ],
+    "scripts": {
+        "post-autoload-dump": [
+            "@php ./vendor/bin/testbench package:discover --ansi"
+        ]
+    },
+    "require": {
+        "smurfworks/model-finder": "v1.0.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "orchestra/testbench": "^7.10"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SmurfWorks\\Sieve\\SieveProvider"
+            ]
+        }
+    }
+}

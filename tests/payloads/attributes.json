@@ -1,0 +1,12 @@
+{
+    "model": "SmurfWorks\\ModelFinderTests\\SampleModels\\User",
+    "query": {
+        "attributes": [
+            {
+                "field": "name",
+                "operator": "eq",
+                "value": "Glyn"
+            }
+        ]
+    }
+}
